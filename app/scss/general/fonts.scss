@@ -1,0 +1,46 @@
+@font-face  {
+  font-family: "OpenSans-Regular";
+  font-display: swap;
+  src: url("./../fonts/OpenSans-Regular.woff") format("woff"),
+       url("./../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: "OpenSans-SemiBold";
+  font-display: swap;
+  src: url("./../fonts/OpenSans-SemiBold.woff") format("woff"),
+       url("./../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: "OpenSans-Bold";
+  font-display: swap;
+  src: url("./../fonts/OpenSans-Bold.woff") format("woff"),
+       url("./../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+@font-face  {
+  font-family: "SF-Display-Regular";
+  font-display: swap;
+  src: url("./../fonts/SF-Display-Regular.woff") format("woff"),
+       url("./../fonts/SF-Display-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: "SF-Text-Medium";
+  font-display: swap;
+  src: url("./../fonts/SF-Text-Medium.woff") format("woff"),
+       url("./../fonts/SF-Text-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
