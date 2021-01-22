@@ -53,7 +53,7 @@
     flex-wrap: wrap;
 
     @media (max-width: $desctop) {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
 
     .nav__item {
@@ -89,22 +89,25 @@
       }
 
       transition: 0.3s;
+
       &:hover {
-        & > a {
+        &>a {
           color: $color-form;
         }
+
         &::after {
           transform: rotate(-45deg);
         }
+
         &::before {
           transform: rotate(45deg);
         }
       }
 
-      & > a {
+      &>a {
         padding: 1px 20px 1px 0px;
 
-        
+
         @media (max-width: $tablet) {
           width: 100%;
           display: flex;
@@ -131,12 +134,13 @@
 
   &__item {
     position: relative;
+
     &:hover {
       .nav__sub-list {
         left: -10px;
         visibility: visible;
         opacity: 1;
-        transition: 0.3s opacity;  
+        transition: 0.3s opacity;
         width: auto;
         padding: 10px;
         min-width: 150px;
@@ -162,6 +166,7 @@
 
     a {
       white-space: nowrap;
+
       @media (max-width: $tablet) {
         width: 100%;
         display: flex;
@@ -170,30 +175,26 @@
     }
   }
 }
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
+
 @media (max-width: $tablet) {
   .nav {
     height: 0;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s 0.3s height;
-  
+
     &__item {
       &:hover {
         .nav__sub-list {
           position: absolute;
           visibility: hidden;
           opacity: 0;
-          -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.25);
-          box-shadow: 0 4px 4px rgba(0,0,0,.25);
+          -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
           width: 100%;
           background: #fff;
         }
+
         .nav__sub-list--open {
           height: auto;
           opacity: 1;

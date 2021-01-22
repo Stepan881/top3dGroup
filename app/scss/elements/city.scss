@@ -1,7 +1,7 @@
 .city {
   position: relative;
   padding: 5px 0;
-  
+
   @media (max-width: $tablet) {
     margin: 0 auto;
     text-align: center;
@@ -24,9 +24,10 @@
     }
 
     &:hover {
-      
+
       svg {
         transform: rotate(180deg);
+
         @media (max-width: $tablet) {
           transform: rotate(0deg);
         }
@@ -38,13 +39,14 @@
         left: 0;
         transition: 0.3s opacity;
         z-index: 10;
+
         @media (max-width: $tablet) {
           transition: 0.3s 0.3s height;
           opacity: 0;
           visibility: hidden;
         }
       }
-    }    
+    }
 
     &--active {
 
@@ -54,7 +56,7 @@
             transform: rotate(180deg);
           }
         }
-  
+
         &~.city__list {
           @media (max-width: $tablet) {
             opacity: 1;
@@ -70,6 +72,7 @@
           visibility: visible;
         }
       }
+
       svg {
         @media (max-width: $tablet) {
           transform: rotate(180deg);
@@ -92,7 +95,7 @@
     background: $bg-c;
 
     @media (max-width: $tablet) {
-      position: static; 
+      position: static;
       height: 0;
       padding: 0;
       left: 0;
@@ -100,7 +103,7 @@
       visibility: hidden;
       background: inherit;
       box-shadow: none;
-      border-bottom: 1px solid rgba(189,189,189,.35);
+      border-bottom: 1px solid rgba(189, 189, 189, .35);
     }
 
     &:hover {
@@ -126,4 +129,3 @@
     align-items: center;
   }
 }
-
