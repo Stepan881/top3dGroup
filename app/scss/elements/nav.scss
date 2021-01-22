@@ -1,0 +1,239 @@
+.nav-index {
+  width: 100%;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $desctop) {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $desctop) {
+      justify-content: flex-start;
+      padding-right: 40px;
+    }
+  }
+
+
+  ul>li {
+    @media (max-width: $tablet) {
+      padding: 3px;
+    }
+  }
+
+  a {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 3px;
+    white-space: nowrap;
+
+    @media (max-width: $desctop) {
+      padding: 3px 5px;
+    }
+
+    @media (max-width: $tablet) {
+      padding: 5px;
+    }
+
+    @include hover();
+  }
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $desctop) {
+      justify-content: flex-end;
+    }
+
+    .nav__item {
+      position: relative;
+      padding: 1px 0px 5px;
+
+      &::after {
+        transition: 0.3s;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 9px;
+        width: 6px;
+        height: 1px;
+        transform: rotate(45deg);
+        background: #BDBDBD;
+      }
+
+      &::before {
+        transition: 0.3s;
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 10px;
+        right: 5px;
+        width: 6px;
+        height: 1px;
+        transform: rotate(-45deg);
+        background: #BDBDBD;
+      }
+
+      transition: 0.3s;
+      &:hover {
+        & > a {
+          color: $color-form;
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+      }
+
+      & > a {
+        padding: 1px 20px 1px 0px;
+
+        
+        @media (max-width: $tablet) {
+          width: 100%;
+          display: flex;
+          padding: 3px 20px 3px 0px;
+        }
+      }
+    }
+  }
+
+  a {
+    font-family: 'OpenSans-Bold', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    color: $color;
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.3s;
+      color: $color-form;
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:hover {
+      .nav__sub-list {
+        left: -10px;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.3s opacity;  
+        width: auto;
+        padding: 10px;
+        min-width: 150px;
+        z-index: 10;
+      }
+    }
+  }
+
+  &__sub-list {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: -100vw;
+    background: $bg-c;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    transition: 0.3s opacity;
+    background: $bg-c;
+
+    li {
+      padding: 3px 0;
+    }
+
+    a {
+      white-space: nowrap;
+      @media (max-width: $tablet) {
+        width: 100%;
+        display: flex;
+        padding: 2px;
+      }
+    }
+  }
+}
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+////////////////////////////////////////
+@media (max-width: $tablet) {
+  .nav {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s 0.3s height;
+  
+    &__item {
+      &:hover {
+        .nav__sub-list {
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.25);
+          box-shadow: 0 4px 4px rgba(0,0,0,.25);
+          width: 100%;
+          background: #fff;
+        }
+        .nav__sub-list--open {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+          box-shadow: none;
+          position: static;
+        }
+      }
+    }
+
+    &--open {
+      transition: 0.3s opacity;
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      transition: 0.3s;
+
+
+
+      .nav__list {
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        margin: 0 auto;
+        padding-top: 15px;
+      }
+
+      .nav__sub-list {
+
+        &--open {
+          position: static;
+          opacity: 1;
+          height: auto;
+          visibility: visible;
+          box-shadow: none;
+          height: auto;
+          padding: 10px;
+          min-width: 150px;
+        }
+      }
+    }
+  }
+}

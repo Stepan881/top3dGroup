@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+  
+  @media (max-width: $tablet) {
+    padding: 5px 0 15px;
+  }
+
+  li {
+    margin-left: 14px;
+  }
+
+  a {
+    display: flex;
+    padding: 2px;
+    @include hover();
+  }
+}
