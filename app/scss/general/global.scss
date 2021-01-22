@@ -4,21 +4,8 @@
 
 html {
   box-sizing: border-box;
-  position: relative;    
+  position: relative;
   color: $color;
- 
-/*
-600
-font-family: 'OpenSans-SemiBold', Arial, sans-serif;
-700
-font-family: 'OpenSans-Bold', Arial, sans-serif;
-
-font-family: 'SF-Display-Regular', Arial, sans-serif;
-
-font-family: 'SF-Text-Medium', Arial, sans-serif;
-*/
-  
-//400
   font-family: 'OpenSans-Regular', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -26,7 +13,7 @@ font-family: 'SF-Text-Medium', Arial, sans-serif;
   line-height: 18px;
 }
 
-body { 
+body {
   overflow-x: hidden;
 }
 
@@ -42,7 +29,8 @@ body {
   overflow: hidden;
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -67,26 +55,21 @@ button {
   margin: 0;
 }
 
-h1, h2, h3 {
-  margin: 0; 
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 p {
   margin: 0;
 }
 
-
 @mixin hover() {
   transition: 0.3s;
+
   &:hover {
     transition: 0.3s;
     color: $color-form;
   }
- }
- 
-
-/*
-  @media (max-width: $tablet) {
-    padding: 19px 40px;
-  }
-*/
+}
