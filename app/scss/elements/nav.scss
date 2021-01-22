@@ -159,6 +159,7 @@
     width: 100%;
     transition: 0.3s opacity;
     background: $bg-c;
+    z-index: -999;
 
     li {
       padding: 3px 0;
@@ -212,14 +213,13 @@
       visibility: visible;
       transition: 0.3s;
 
-
-
       .nav__list {
         display: flex;
         flex-direction: column;
         max-width: 320px;
         margin: 0 auto;
         padding-top: 15px;
+        z-index: -1;
       }
 
       .nav__sub-list {
